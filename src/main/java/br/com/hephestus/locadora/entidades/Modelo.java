@@ -1,13 +1,21 @@
 package br.com.hephestus.locadora.entidades;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.List;
 
 /**
  * Created by igor on 05/02/16.
  */
+@Entity
 public class Modelo {
 
+    @Id
+    @GeneratedValue
     private Short idModelo;
+    @Column
     private String descricao;
 
     private List<Veiculo> veiculos;
